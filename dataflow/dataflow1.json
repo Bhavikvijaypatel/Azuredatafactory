@@ -14,9 +14,9 @@
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "SourceDataset_01q",
-						"type": "DatasetReference"
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
 					},
 					"name": "sink1"
 				}
@@ -42,14 +42,11 @@
 				"     salary = max(salary)) ~> aggregate1",
 				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          id as string,",
-				"          first_name as string,",
-				"          last_name as string,",
-				"          email as string,",
-				"          gender as string,",
-				"          salary as string",
-				"     ),",
+				"     format: 'delimited',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
