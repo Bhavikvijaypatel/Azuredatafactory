@@ -1,0 +1,9 @@
+{
+	"name": "bhavikdatafactory",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9a81c292-6943-4945-bb7b-fedf8cffc5c7",
+		"tenantId": "1da946d0-3322-4aba-8f59-55ff1e4e48e5"
+	}
+}
